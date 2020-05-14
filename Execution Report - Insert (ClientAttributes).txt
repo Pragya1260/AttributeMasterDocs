@@ -1,0 +1,78 @@
+CASE 1: WHEN INSERTING A NEW ATTRIBUTE
+EXEC MDM.SetMasterClientAttribute @jsonStringForClientAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	-9999    
+											,"AttributeID"				:   0 
+											,"AttributeName"			:   "Client101"
+											,"AttributeCode"			:   "1"
+											,"AttributeValue"			:   "ABC"
+											,"IsActive"	    			:   1
+											,"IsDeleted"				:	0
+											,"IsRTAAttribute"			: 	0
+											,"ControlType"				:	2
+											,"Action"					:	"I"
+										},
+										{
+											"AttributeMasterID"			:  	-9998    
+											,"AttributeID"				:   0 
+											,"AttributeName"			:   "Client101"
+											,"AttributeCode"			:   "2"
+											,"AttributeValue"			:   "DEF"
+											,"IsActive"	    			:   1
+											,"IsDeleted"				:	0
+											,"IsRTAAttribute"			: 	0
+											,"ControlType"				:	2
+											,"Action"					:	"I"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													 "AttributeMasterID"		:	-9999
+													,"ClientType"				:	1
+													,"IsDefaultValue"			:	0
+													,"IsPartOfDefaultSet"		:	0
+													,"DisplayOrder"				:	1
+													,"IsMandatory"				:	0
+													,"Action"					:	"I"
+												},
+												{
+													 "AttributeMasterID"		:	-9998
+													,"ClientType"				:	1
+													,"IsDefaultValue"			:	0
+													,"IsPartOfDefaultSet"		:	0
+													,"DisplayOrder"				:	1
+													,"IsMandatory"				:	0
+													,"Action"					:	"I"
+												}
+											]
+			  }'  ,@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+
+CASE 2: WHEN ON EDITING AN ATTRIBUTE ADDING A NEW VALUE TO IT.
+EXEC MDM.SetMasterClientAttribute @jsonStringForClientAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	-9999    
+											,"AttributeID"				:   16 
+											,"AttributeName"			:   "Client101"
+											,"AttributeCode"			:   "3"
+											,"AttributeValue"			:   "GHI"
+											,"IsActive"	    			:   1
+											,"IsDeleted"				:	0
+											,"IsRTAAttribute"			: 	0
+											,"ControlType"				:	2
+											,"Action"					:	"I"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													 "AttributeMasterID"		:	-9999
+													,"ClientType"				:	2
+													,"IsDefaultValue"			:	0
+													,"IsPartOfDefaultSet"		:	0
+													,"DisplayOrder"				:	1
+													,"IsMandatory"				:	0
+													,"Action"					:	"I"
+												}
+											]
+			  }'  ,@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'

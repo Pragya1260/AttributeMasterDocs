@@ -1,0 +1,28 @@
+EXEC MDM.SetMasterEntityAttribute @jsonStringForEntityAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	13
+											,"AttributeID"				:   13 
+											,"AttributeName"			:   "B"
+											,"AttributeCode"			:   "1/1/2020"
+											,"AttributeValue"			:   " "
+											,"IsActive"	    			:   1
+											,"IsDeleted"				:	0
+											,"IsRTAAttribute"			: 	0
+											,"ControlType"				:	2
+											,"Action"					:	"U"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													 "AttributeMasterID"		:	12
+													,"EntityType"				:	2
+													,"IsDefaultValue"			:	0
+													,"IsPartOfDefaultSet"		:	0
+													,"DisplayOrder"				:	1
+													,"IsMandatory"				:	1
+													,"IsValidateFASLockDate"	:	0
+													,"Action"					:	"U"
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'

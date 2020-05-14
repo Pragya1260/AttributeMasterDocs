@@ -1,0 +1,80 @@
+CASE 1: WHEN INSERTING A NEW ATTRIBUTE
+EXEC MDM.SetMasterContactAddressAttribute @jsonStringForContactAddressAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeID"		:	0							
+											,"AttributeName"	:	"IsLegal"						
+											,"IsActive"			:	1							
+											,"IsDeleted"		:	0							
+											,"ControlType"		:	3							
+											,"IsMandatory"		:	0							
+											,"IsAddressType"	:	0		
+											,"Action"			:	"I"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"AttributeMasterValueID"	:	-9999
+													,"AttributeID"				:	0		
+													,"AttributeCode"			:	1	
+													,"AttributeValue"			:	"No"		
+													,"IsDefaultValue"			:	0		
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+													
+												},
+												{
+													"AttributeMasterValueID"	:	-9998
+													,"AttributeID"				:	0	
+													,"AttributeCode"			:	2	
+													,"AttributeValue"			:	"YES"
+													,"IsDefaultValue"			:	0	
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+												},
+												{
+													"AttributeMasterValueID"	:	-9997
+													,"AttributeID"				:	0	
+													,"AttributeCode"			:	3	
+													,"AttributeValue"			:	"MAYBE"
+													,"IsDefaultValue"			:	0	
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+												}
+											]
+			  }'  ,@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+
+
+CASE 2: WHEN ON EDITING AN ATTRIBUTE ADDING A NEW VALUE TO IT.
+EXEC MDM.SetMasterContactAddressAttribute @jsonStringForContactAddressAttributes = N'{
+				"AttributeMasterMapping" : [
+												{
+													"AttributeMasterValueID"	:	18
+													,"AttributeID"				:	0		
+													,"AttributeCode"			:	3	
+													,"AttributeValue"			:	"MayBe"		
+													,"IsDefaultValue"			:	0		
+													,"IsActive"					:	1
+													,"Action"					:	"U"
+													
+												},
+												{
+													"AttributeMasterValueID"	:	-9999
+													,"AttributeID"				:	0	
+													,"AttributeCode"			:	4
+													,"AttributeValue"			:	"ABC"
+													,"IsDefaultValue"			:	0	
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+												},
+												{
+													"AttributeMasterValueID"	:	-9998
+													,"AttributeID"				:	0	
+													,"AttributeCode"			:	5	
+													,"AttributeValue"			:	"DEF"
+													,"IsDefaultValue"			:	0	
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+												}
+											]
+			  }'  ,@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'

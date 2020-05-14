@@ -1,0 +1,25 @@
+EXEC MDM.SetMasterContactAddressAttribute @jsonStringForContactAddressAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeID"		:	4				
+											,"AttributeName"	:	"IsLegal"		
+											,"IsActive"			:	1				
+											,"IsDeleted"		:	0				
+											,"ControlType"		:	3				
+											,"IsMandatory"		:	1				
+											,"IsAddressType"	:	0		
+											,"Action"			:	"U"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"AttributeMasterValueID"	:	17
+													,"AttributeID"				:	4		
+													,"AttributeCode"			:	2	
+													,"AttributeValue"			:	"Yes"	
+													,"IsDefaultValue"			:	0		
+													,"IsActive"					:	1
+													,"Action"					:	"U"
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'

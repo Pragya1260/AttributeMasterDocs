@@ -1,0 +1,49 @@
+EXEC MDM.SetMasterAttributes @applicationType = 3
+							,@machineName = 'INSITPRAG160'
+							,@loginUser = 'PRAGYAS'
+							,@jsonStringForEntityAttributes = ''
+							,@jsonStringForClientAttributes	= ''	
+							,@jsonStringForContactAddressAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeID"		:	0							
+											,"AttributeName"	:	"PRAGYA"	 					
+											,"IsActive"			:	1							
+											,"IsDeleted"		:	0							
+											,"ControlType"		:	3							
+											,"IsMandatory"		:	0							
+											,"IsAddressType"	:	0		
+											,"Action"			:	"I"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"AttributeMasterValueID"	:	-9999
+													,"AttributeID"				:	0		
+													,"AttributeCode"			:	1	
+													,"AttributeValue"			:	"No"		
+													,"IsDefaultValue"			:	0		
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+													
+												},
+												{
+													"AttributeMasterValueID"	:	-9998
+													,"AttributeID"				:	0	
+													,"AttributeCode"			:	2	
+													,"AttributeValue"			:	"YES"
+													,"IsDefaultValue"			:	0	
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+												},
+												{
+													"AttributeMasterValueID"	:	-9997
+													,"AttributeID"				:	0	
+													,"AttributeCode"			:	3	
+													,"AttributeValue"			:	"MAYBE"
+													,"IsDefaultValue"			:	0	
+													,"IsActive"					:	1
+													,"Action"					:	"I"
+												}
+											]
+			  }'
