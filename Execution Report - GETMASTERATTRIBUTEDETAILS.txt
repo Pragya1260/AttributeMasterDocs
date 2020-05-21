@@ -1,0 +1,9 @@
+EXEC MDM.GetMasterAttributeDetails @applicationType = 1
+									,@attributeID	= 29
+
+EXEC MDM.GetMasterAttributeDetails @applicationType = 2
+									,@attributeID	= 1
+
+EXEC MDM.GetMasterAttributeDetails @applicationType = 3
+									,@attributeID	= 12
+

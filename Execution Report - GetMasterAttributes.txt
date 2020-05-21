@@ -1,0 +1,36 @@
+
+
+EXEC MDM.GetMasterAttributes @applicationType = 1
+							 ,@type = N'0'
+							 ,@isActive = 1
+							 ,@isDeleted = 0	
+							 ,@attributeName = null	
+							 ,@attributeID= 49
+
+EXEC MDM.GetMasterAttributes @applicationType = 0
+							 ,@type = null
+							 ,@isActive = 1
+							 ,@isDeleted = 0	
+							 ,@attributeName = null	
+							 ,@attributeID= null
+
+EXEC MDM.GetMasterAttributes @applicationType = 2
+							 ,@type = N'1'
+							 ,@isActive = 1
+							 ,@isDeleted = 0	
+							 ,@attributeName = null	
+							 ,@attributeID= null
+
+EXEC MDM.GetMasterAttributes @applicationType = 1
+							 ,@type = null
+							 ,@isActive = 1
+							 ,@isDeleted = 0	
+							 ,@attributeName = 'A1'	
+							 ,@attributeID= null
+
+EXEC MDM.GetMasterAttributes @applicationType = 0
+							 ,@type = null
+							 ,@isActive = 1
+							 ,@isDeleted = 0	
+							 ,@attributeName = null	
+							 ,@attributeID= null

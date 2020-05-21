@@ -1,0 +1,119 @@
+--INSERT
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	-9999					
+											,"AttributeID"				:   0 					
+											,"AttributeName"			:   "Entity1"			
+											,"AttributeCode"			:   "0"					
+											,"AttributeValue"			:   "YES"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	3	
+											,"ApplicableFor"			:	1	
+											,"Action"					:	"I"					
+										},
+										{
+											"AttributeMasterID"			:  	-9998   
+											,"AttributeID"				:   0 
+											,"AttributeName"			:   "Entity1"
+											,"AttributeCode"			:   "1"
+											,"AttributeValue"			:   "NO"
+											,"IsActive"	    			:   1
+											,"IsDeleted"				:	0
+											,"IsRTAAttribute"			: 	0
+											,"ControlType"				:	3
+											,"ApplicableFor"			:	1
+											,"Action"					:	"I"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"MappingID"					:	-9999
+													,"AttributeMasterID"		:	-9999		
+													,"AttributeID"				:	0			
+													,"SubType"					:	1			
+													,"IsDefaultValue"			:	0			
+													,"IsPartOfDefaultSet"		:	0			
+													,"DisplayOrder"				:	2			
+													,"IsMandatory"				:	0	
+													,"IsValidateFASLockDate"	:	0
+													,"ApplicableFor"			:	1			
+													,"Action"					:	"I"	
+												},
+												{
+													"MappingID"					:	-9998
+													,"AttributeMasterID"		:	-9998		
+													,"AttributeID"				:	0			
+													,"SubType"					:	1			
+													,"IsDefaultValue"			:	0			
+													,"IsPartOfDefaultSet"		:	0			
+													,"DisplayOrder"				:	1			
+													,"IsMandatory"				:	0	
+													,"IsValidateFASLockDate"	:	0
+													,"ApplicableFor"			:	1			
+													,"Action"					:	"I"	
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+
+-- INSERT NEW MAPPING TO A ALREADY EXISTING ATTRIBUTE
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : null
+				,"AttributeMasterMapping" : [
+												{
+													"MappingID"					:	-9999
+													,"AttributeMasterID"		:	128		
+													,"AttributeID"				:	110			
+													,"SubType"					:	2			
+													,"IsDefaultValue"			:	0			
+													,"IsPartOfDefaultSet"		:	0			
+													,"DisplayOrder"				:	1			
+													,"IsMandatory"				:	0	
+													,"IsValidateFASLockDate"	:	0
+													,"ApplicableFor"			:	1			
+													,"Action"					:	"I"	
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+
+--UPDATE MAPPING
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : null
+				,"AttributeMasterMapping" : [
+												{
+													"MappingID"					:	121
+													,"AttributeMasterID"		:	128		
+													,"AttributeID"				:	110			
+													,"SubType"					:	1			
+													,"IsDefaultValue"			:	1			
+													,"IsPartOfDefaultSet"		:	1			
+													,"DisplayOrder"				:	1			
+													,"IsMandatory"				:	1	
+													,"IsValidateFASLockDate"	:	1
+													,"ApplicableFor"			:	1			
+													,"Action"					:	"U"	
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+			  
+-- UPDATE ATTRIBUTE DATA
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	129				
+											,"AttributeID"				:   110 					
+											,"AttributeName"			:   "Entity1"			
+											,"AttributeCode"			:   "1"					
+											,"AttributeValue"			:   "No-n"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	1					
+											,"ControlType"				:	3	
+											,"ApplicableFor"			:	1	
+											,"Action"					:	"U"					
+										}
+									]
+				,"AttributeMasterMapping" : null
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'

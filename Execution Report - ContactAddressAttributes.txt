@@ -1,0 +1,188 @@
+--INSERT SCRIPT
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	-9999					
+											,"AttributeID"				:   0 					
+											,"AttributeName"			:   "IsLegal"			
+											,"AttributeCode"			:   "0"					
+											,"AttributeValue"			:   "YES"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	3	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"I"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"MappingID"					:	0
+													,"AttributeMasterID"		:	-9999		
+													,"AttributeID"				:	0			
+													,"SubType"					:	4			
+													,"IsDefaultValue"			:	0			
+													,"IsPartOfDefaultSet"		:	0			
+													,"DisplayOrder"				:	1			
+													,"IsMandatory"				:	0	
+													,"IsValidateFASLockDate"	:	0
+													,"ApplicableFor"			:	3			
+													,"Action"					:	"I"	
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+
+
+--UPDATE SCRIPT
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	-9999					
+											,"AttributeID"				:   12 					
+											,"AttributeName"			:   "IsLegal"			
+											,"AttributeCode"			:   null					
+											,"AttributeValue"			:   "PRAGYA"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	3	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"U"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"MappingID"					:	34
+													,"AttributeMasterID"		:	-9999		
+													,"AttributeID"				:	12			
+													,"SubType"					:	4			
+													,"IsDefaultValue"			:	0			
+													,"IsPartOfDefaultSet"		:	0			
+													,"DisplayOrder"				:	0			
+													,"IsMandatory"				:	0	
+													,"IsValidateFASLockDate"	:	0
+													,"ApplicableFor"			:	3			
+													,"Action"					:	"U"	
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+
+--INSERT SCRIPT FOR DROP DOWN TYPE ATTRIBUTE
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	-9999					
+											,"AttributeID"				:   0 					
+											,"AttributeName"			:   "C/A-1"			
+											,"AttributeCode"			:   "0"					
+											,"AttributeValue"			:   "YES"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	1	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"I"
+										},
+										{
+											"AttributeMasterID"			:  	-9998					
+											,"AttributeID"				:   0 					
+											,"AttributeName"			:   "C/A-1"			
+											,"AttributeCode"			:   "1"					
+											,"AttributeValue"			:   "NO"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	1	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"I"
+										},
+										{
+											"AttributeMasterID"			:  	-9997					
+											,"AttributeID"				:   0 					
+											,"AttributeName"			:   "C/A-1"			
+											,"AttributeCode"			:   "2"					
+											,"AttributeValue"			:   "MAYBE"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	1	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"I"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"MappingID"					:	-9999
+													,"AttributeMasterID"		:	0		
+													,"AttributeID"				:	0			
+													,"SubType"					:	1			
+													,"IsDefaultValue"			:	0			
+													,"IsPartOfDefaultSet"		:	0			
+													,"DisplayOrder"				:	1			
+													,"IsMandatory"				:	0	
+													,"IsValidateFASLockDate"	:	0
+													,"ApplicableFor"			:	3			
+													,"Action"					:	"I"	
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
+
+--UPDATE WHEN IT IS A DROP DOWN TYPE ATTRIBUTE
+EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
+				"AttributeMaster" : [
+										{
+											"AttributeMasterID"			:  	35					
+											,"AttributeID"				:   21 					
+											,"AttributeName"			:   "C/A1"			
+											,"AttributeCode"			:   "0"					
+											,"AttributeValue"			:   "YES"			
+											,"IsActive"	    			:   0					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	1	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"U"
+										},
+										{
+											"AttributeMasterID"			:  	36					
+											,"AttributeID"				:   21 					
+											,"AttributeName"			:   "C/A1"			
+											,"AttributeCode"			:   "1"					
+											,"AttributeValue"			:   "NO"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	1	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"U"
+										},
+										{
+											"AttributeMasterID"			:  	37					
+											,"AttributeID"				:   21 					
+											,"AttributeName"			:   "C/A1"			
+											,"AttributeCode"			:   "2"					
+											,"AttributeValue"			:   "MAYBE"			
+											,"IsActive"	    			:   1					
+											,"IsDeleted"				:	0					
+											,"IsRTAAttribute"			: 	0					
+											,"ControlType"				:	1	
+											,"ApplicableFor"			:	3	
+											,"Action"					:	"U"
+										}
+									]
+				,"AttributeMasterMapping" : [
+												{
+													"MappingID"					:	31
+													,"AttributeMasterID"		:	0		
+													,"AttributeID"				:	21			
+													,"SubType"					:	1			
+													,"IsDefaultValue"			:	1			
+													,"IsPartOfDefaultSet"		:	0			
+													,"DisplayOrder"				:	1			
+													,"IsMandatory"				:	1	
+													,"IsValidateFASLockDate"	:	0
+													,"ApplicableFor"			:	3			
+													,"Action"					:	"U"	
+												}
+											]
+			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
