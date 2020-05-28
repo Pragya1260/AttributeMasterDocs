@@ -4,7 +4,7 @@ EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
 										{
 											"AttributeMasterID"			:  	-9999					
 											,"AttributeID"				:   0 					
-											,"AttributeName"			:   "IsLegal"			
+											,"AttributeName"			:   "PP"			
 											,"AttributeCode"			:   "0"					
 											,"AttributeValue"			:   "YES"			
 											,"IsActive"	    			:   1					
@@ -26,12 +26,13 @@ EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
 													,"DisplayOrder"				:	1			
 													,"IsMandatory"				:	0	
 													,"IsValidateFASLockDate"	:	0
+													,"ApplicableStartDateChange":	0
+													,"ApplicableEndDateChange"	:	0
 													,"ApplicableFor"			:	3			
 													,"Action"					:	"I"	
 												}
 											]
 			  }',@machineName = N'INSITPRAG1260', @loginUser = 'pragyas'
-
 
 --UPDATE SCRIPT
 EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
@@ -61,6 +62,8 @@ EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
 													,"DisplayOrder"				:	0			
 													,"IsMandatory"				:	0	
 													,"IsValidateFASLockDate"	:	0
+													,"ApplicableStartDateChange":	0
+													,"ApplicableEndDateChange"	:	0
 													,"ApplicableFor"			:	3			
 													,"Action"					:	"U"	
 												}
@@ -121,6 +124,8 @@ EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
 													,"DisplayOrder"				:	1			
 													,"IsMandatory"				:	0	
 													,"IsValidateFASLockDate"	:	0
+													,"ApplicableStartDateChange":	0
+													,"ApplicableEndDateChange"	:	0
 													,"ApplicableFor"			:	3			
 													,"Action"					:	"I"	
 												}
@@ -181,6 +186,8 @@ EXEC MDM.SetMasterAttributes @jsonStringForMasterAttributes = N'{
 													,"DisplayOrder"				:	1			
 													,"IsMandatory"				:	1	
 													,"IsValidateFASLockDate"	:	0
+													,"ApplicableStartDateChange":	0
+													,"ApplicableEndDateChange"	:	0
 													,"ApplicableFor"			:	3			
 													,"Action"					:	"U"	
 												}
