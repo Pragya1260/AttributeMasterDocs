@@ -1,36 +1,43 @@
-
-
-EXEC MDM.GetMasterAttributes @applicationType = 1
-							 ,@type = N'0'
-							 ,@isActive = 1
-							 ,@isDeleted = 0	
-							 ,@attributeName = null	
-							 ,@attributeID= 49
-
+--GET ALL ACTIVE DATA
 EXEC MDM.GetMasterAttributes @applicationType = 0
 							 ,@type = null
 							 ,@isActive = 1
 							 ,@isDeleted = 0	
+							 ,@isRTAAttribute = 0	
+							 ,@isMandatory = 0
+							 ,@isFASLockDate	= 0	
 							 ,@attributeName = null	
 							 ,@attributeID= null
 
-EXEC MDM.GetMasterAttributes @applicationType = 2
-							 ,@type = N'1'
-							 ,@isActive = 1
-							 ,@isDeleted = 0	
-							 ,@attributeName = null	
-							 ,@attributeID= null
+--GET ALL ENTITY DATA
+EXEC MDM.GetMasterAttributes 	@applicationType = 1
+								,@type	= null			
+								,@isActive = 1			
+								,@isDeleted	= 0	
+								,@isRTAAttribute = 0	
+								,@isMandatory = 0
+								,@isFASLockDate	 = 0	
+								,@attributeName	= NULL
+								,@attributeID= NULL	
 
-EXEC MDM.GetMasterAttributes @applicationType = 1
-							 ,@type = null
-							 ,@isActive = 1
-							 ,@isDeleted = 0	
-							 ,@attributeName = 'A1'	
-							 ,@attributeID= null
+--GET ALL CLIENT DATA
+EXEC MDM.GetMasterAttributes 	@applicationType = 2
+								,@type	= null			
+								,@isActive = 1			
+								,@isDeleted	= 0	
+								,@isRTAAttribute = 0	
+								,@isMandatory = 0
+								,@isFASLockDate	 = 0	
+								,@attributeName	= NULL
+								,@attributeID= NULL	
 
-EXEC MDM.GetMasterAttributes @applicationType = 0
-							 ,@type = null
-							 ,@isActive = 1
-							 ,@isDeleted = 0	
-							 ,@attributeName = null	
-							 ,@attributeID= null
+--GET ALL CONTACT/ADDRESS DATA
+EXEC MDM.GetMasterAttributes 	@applicationType = 3
+								,@type	= null			
+								,@isActive = 1			
+								,@isDeleted	= 0	
+								,@isRTAAttribute = 0	
+								,@isMandatory = 0
+								,@isFASLockDate	 = 0	
+								,@attributeName	= NULL
+								,@attributeID= NULL	
